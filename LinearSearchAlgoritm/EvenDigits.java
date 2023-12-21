@@ -3,7 +3,7 @@ package LinearSearchAlgoritm;
 import java.util.Arrays;
 
 public class EvenDigits {
-
+    //Given an array nums of integers, return how many of them contain an even number of digits.
     public static void main(String[] args) {
         int[] nums = {12, 345, 2, 6, 7896};
         System.out.println(findDigitsNumbers2(nums));
