@@ -3,7 +3,8 @@ package BinarySearchAlgorithm;
 public class OrderAgnosticBinarySearch {
     public static void main(String[] args) {
         //sorted Array
-        int[] arr ={-6, 5, 45, 86, 470, 980};
+        //int[] arr ={-6, 5, 45, 86, 470, 980};
+        int[] arr ={450, 140, 70, 45, -6, -10};
         int target = -6;
         System.out.println(binarySearch(arr, target));
     }
