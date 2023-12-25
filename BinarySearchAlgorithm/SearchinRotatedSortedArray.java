@@ -2,7 +2,6 @@ package BinarySearchAlgorithm;
 
 public class SearchinRotatedSortedArray {
     //https://leetcode.com/problems/search-in-rotated-sorted-array/
-
     public static void main(String[] args) {
         int[] arr = {3,1};
         int target = 1;
