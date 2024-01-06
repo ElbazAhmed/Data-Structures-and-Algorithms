@@ -6,19 +6,23 @@ public class CyclicSort {
     //given an array of number from 1 to N that is not sorted
     //we sort them using the cyclic sort
     public static void main(String[] args) {
-        int[] arr ={3,5,6,7,2,1,4};
+        int[] arr ={3,5,6,2,1,7,4};
         cyclicSort(arr);
         System.out.println(Arrays.toString(arr));
     }
     static void cyclicSort(int[] arr){
-        for(int i=0; i<arr.length; i++){
+        int i=0;
+        while (i<arr.length) {
             //if the element i is not in its correct position that is i+1 we swap it with the element that is in its correct position
-            while (arr[i] != i+1) {
+            if (arr[i] != i+1) {
                 int temp=arr[i];
                 arr[i]=arr[temp-1];
                 arr[temp-1]=temp;
+            }else{
+                //the element i is now in its correct position
+                i++;
             }
-            //the element i is now in its correct position
+
         }
     }
 }

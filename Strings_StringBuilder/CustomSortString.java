@@ -7,7 +7,7 @@ public class CustomSortString {
     //Permute the characters of s so that they match the order that order was sorted.
     // More specifically, if a character x occurs before a character y in order,
     // then x should occur before y in the permuted string.
-    
+
     public static void main(String[] args) {
         String order = "cba", s = "abcd";
         System.out.println(customSortString(order,s));
