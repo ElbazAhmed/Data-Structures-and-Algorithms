@@ -33,7 +33,7 @@ public class CustomSortString {
                 hash.remove(charArray[i]);
             }
         }
-        //add other characters that not exist in the string order 
+        //add other characters that not exist in the string order
         for(char c : hash.keySet()){
             for(int i=0; i<hash.get(c); i++){
                 str.append(c);
