@@ -7,11 +7,11 @@ public class FibonacciNumber {
     //F(0) = 0, F(1) = 1
     //F(n) = F(n - 1) + F(n - 2), for n > 1.
     public static void main(String[] args) {
-        int n = 6;
+        int n = 5;
         System.out.println(fib(n));
     }
     static int fib(int n) {
-        //base condition 
+        //base condition
         if(n<2){
             return n;
         }
