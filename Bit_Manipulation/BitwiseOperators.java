@@ -5,8 +5,8 @@ public class BitwiseOperators {
         int num = 2;
         //System.out.println(isOdd(num));
         //20 => 10100
-        //System.out.println(findithBit(20,2));  //result 0
-        //System.out.println(setithBit(20,4)); //result 28 => 11100
+        System.out.println(findithBit(20,2));  //result 0
+        System.out.println(setithBit(20,4)); //result 28 => 11100
         System.out.println(resetithBit(20,3)); //result 16 => 10000
 
     }
