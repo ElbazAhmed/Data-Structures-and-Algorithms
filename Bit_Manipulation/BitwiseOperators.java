@@ -6,7 +6,8 @@ public class BitwiseOperators {
         //System.out.println(isOdd(num));
         //20 => 10100
         //System.out.println(findithBit(20,2));  //result 0
-        System.out.println(setithBit(20,4)); //result 28 => 11100
+        //System.out.println(setithBit(20,4)); //result 28 => 11100
+        System.out.println(resetithBit(20,3)); //result 16 => 10000
 
     }
 
@@ -20,8 +21,8 @@ public class BitwiseOperators {
 
     //Shift left operator
     static int findithBit(int num, int ithBit){
-        //given a binary presentation of an integer find the ith bit of it
-        //the shift left operrator 1<<(ithBit-1) give us the binary presentation of Math.pow(2,ithBit-1)
+        //given an integer find the ith bit of it
+        //the shift left operrator 1<<(ithBit-1) give us a number Math.pow(2,ithBit-1)
         //because a << b = a*Math.pow(2,b)
         if((num & (1<<(ithBit-1))) == 0){
             //if the result is 0 its means that the ith bit is 0
@@ -32,11 +33,21 @@ public class BitwiseOperators {
 
     //OR Operator + Shift left operator
     static int setithBit(int num, int ithBit){
-        //given a binary presentation of an integer set the ith bit to 1
-        //the shift left operrator 1<<(ithBit-1) give us the binary presentation of Math.pow(2,ithBit-1)
+        //given an integer set the ith bit to 1
+        //the shift left operrator 1<<(ithBit-1) give us a number Math.pow(2,ithBit-1)
         //because a << b = a*Math.pow(2,b)
         int result = (1<<(ithBit-1))|num;
         return result;
     }
+
+    //Complement Operator + Shift left operator
+    static int resetithBit(int num, int ithBit){
+        // This creates a mask with all bits set to 1, except for the ith bit which is set to 0
+        int mask = ~(1<<(ithBit-1));
+        // Use bitwise AND operator to reset the ith bit to 0 in the given number
+        int result = num & mask;
+        return result;
+    }
+
 
 }
