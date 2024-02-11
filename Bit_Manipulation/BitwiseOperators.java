@@ -4,7 +4,10 @@ public class BitwiseOperators {
     public static void main(String[] args) {
         int num = 2;
         //System.out.println(isOdd(num));
-        System.out.println(findithBit(101110101,2));
+        //20 => 10100
+        //System.out.println(findithBit(20,2));  //result 0
+        System.out.println(setithBit(20,4)); //result 28 => 11100
+
     }
 
     //AND Operator
@@ -14,7 +17,8 @@ public class BitwiseOperators {
         return (num & 1) == 1;
     }
 
-    //Shift left operator 
+
+    //Shift left operator
     static int findithBit(int num, int ithBit){
         //given a binary presentation of an integer find the ith bit of it
         //the shift left operrator 1<<(ithBit-1) give us the binary presentation of Math.pow(2,ithBit-1)
@@ -24,6 +28,15 @@ public class BitwiseOperators {
             return 0;
         }
         return 1;
+    }
+
+    //OR Operator + Shift left operator
+    static int setithBit(int num, int ithBit){
+        //given a binary presentation of an integer set the ith bit to 1
+        //the shift left operrator 1<<(ithBit-1) give us the binary presentation of Math.pow(2,ithBit-1)
+        //because a << b = a*Math.pow(2,b)
+        int result = (1<<(ithBit-1))|num;
+        return result;
     }
 
 }
