@@ -8,6 +8,8 @@ public class LLTest {
         list.insertFirst(6);
         list.insertFirst(3);
         list.insertFirst(4);
+        list.insertLast(12);
+        list.insert(77,3);
         list.display();
     }
 }
