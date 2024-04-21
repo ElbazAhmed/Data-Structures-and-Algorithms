@@ -14,9 +14,17 @@ public class LL {
         newNode.next = head;
         head = newNode;
         if(tail == null){
-            head = tail;
+            tail = head;
         }
         size++;
+    }
+
+    public void display(){
+        Node temp = head;
+        while(temp != null){
+            System.out.print(temp.val + " -> ");
+            temp = temp.next;
+        }
     }
 
     private class Node{
