@@ -11,5 +11,9 @@ public class LLTest {
         list.insertLast(12);
         list.insert(77,3);
         list.display();
+        System.out.println();
+        //System.out.println(list.deleteFirst());
+        System.out.println(list.deleteLast());
+        list.display();
     }
 }

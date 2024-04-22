@@ -48,12 +48,43 @@ public class LL {
         size++;
     }
 
+    public int deleteFirst(){
+        int val = head.val;
+        head=head.next;
+        if(head == null){
+            tail = null;
+        }
+        size--;
+        return val;
+    }
+
+    public int deleteLast(){
+        if(size <= 1){
+            return deleteFirst();
+        }
+        Node newTail = get(size-2);
+        int val = tail.val;
+        tail = newTail;
+        tail.next=null;
+        size--;
+        return val;
+    }
+
+    public Node get(int index){
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
     public void display(){
         Node temp = head;
         while(temp != null){
             System.out.print(temp.val + " -> ");
             temp = temp.next;
         }
+        System.out.print("END");
     }
 
     private class Node{
