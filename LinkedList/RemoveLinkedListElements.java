@@ -16,7 +16,7 @@ public class RemoveLinkedListElements {
             }
             current = current.next; // move to the next node
         }
-        return temp.next; // return the new head 
+        return temp.next; // return the new head
     }
     public class ListNode {
         private int val;
