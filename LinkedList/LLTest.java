@@ -13,7 +13,8 @@ public class LLTest {
         list.display();
         System.out.println();
         //System.out.println(list.deleteFirst());
-        System.out.println(list.deleteLast());
+        //System.out.println(list.deleteLast());
+        System.out.println(list.delete(3));
         list.display();
     }
 }
