@@ -27,4 +27,8 @@
   int[] array = new int[5]; // Allocates memory for 5 integers
   ```
   <p>Each element in the array is stored in a contiguous memory location, which allows for efficient access using the index. However, this also means that resizing the array (increasing or decreasing its size) is not straightforward and typically requires creating a new array and copying the elements, which is why using an ArrayList can be more convenient for dynamic data structures.</p>
+  <h3>Helpful Resources</h3>
+  <a href="https://www.youtube.com/watch?v=pmN9ExDf3yQ">An Overview of Arrays and Memory (Data Structures & Algorithms #2)</a><br>
+  <a href="https://www.youtube.com/watch?v=NptnmWvkbTw">What is an Array? - Processing Tutorial</a><br>
+  <a href="https://www.youtube.com/watch?v=47JBVxCWXJA">Declare, Initialize, and Use an Array - Processing Tutorial</a>
 </details>
