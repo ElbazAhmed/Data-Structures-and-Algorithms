@@ -1,4 +1,4 @@
-package DP_Memorization;
+package DP;
 
 public class UniquePaths {
     //https://leetcode.com/problems/unique-paths/
