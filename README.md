@@ -34,7 +34,7 @@
 </details>
 
 <details>
-  <summary><h2>Boyer-Moore Majority Voting Algorithm (element with more than N/2 occurrences)</h2></summary>
+  <summary><h2>Boyer-Moore Majority Voting Algorithm</h2></summary>
   <p>The Boyer-Moore voting algorithm is one of the popular optimal algorithms which is used to find the majority element among the given elements that have more than N/ 2 occurrences. This works perfectly fine for finding the majority element which takes 2 traversals over the given elements, which works in O(N) time complexity and O(1) space complexity.</p>
   <h3>1. Counting Phase:</h3>
     <ul>
