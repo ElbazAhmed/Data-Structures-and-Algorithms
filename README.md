@@ -32,3 +32,66 @@
   <a href="https://www.youtube.com/watch?v=NptnmWvkbTw">What is an Array? - Processing Tutorial</a><br>
   <a href="https://www.youtube.com/watch?v=47JBVxCWXJA">Declare, Initialize, and Use an Array - Processing Tutorial</a>
 </details>
+
+<details>
+  <summary><h2>Boyer-Moore Majority Voting Algorithm (element with more than N/2 occurrences)</h2></summary>
+  <p>The Boyer-Moore voting algorithm is one of the popular optimal algorithms which is used to find the majority element among the given elements that have more than N/ 2 occurrences. This works perfectly fine for finding the majority element which takes 2 traversals over the given elements, which works in O(N) time complexity and O(1) space complexity.</p>
+  <h3>1. Counting Phase:</h3>
+    <ul>
+        <li>This phase identifies a potential candidate for the majority element.</li>
+        <li>Initialize a variable <code>candidate</code> to <code>0</code> and a counter <code>count</code> to 0.</li>
+        <li>Traverse the array, and for each element:
+            <ul>
+                <li>If <code>count</code> is 0, update <code>candidate</code> with the current element and set <code>count</code> to 1.</li>
+                <li>If the current element equals <code>candidate</code>, increment <code>count</code>.</li>
+                <li>Otherwise, decrement <code>count</code>.</li>
+            </ul>
+        </li>
+    </ul>
+    <h3>2. Verification Phase:</h3>
+    <ul>
+        <li>This phase verifies if the identified <code>candidate</code> is indeed the majority element.</li>
+        <li>Reset the <code>count</code> to 0 and traverse the array again to count the occurrences of <code>candidate</code>.</li>
+        <li>If <code>candidate</code> appears more than <code>&#189;</code> times (where <code>n</code> is the length of the array), it is the majority element.</li>
+        <li>Else return <code>-1</code>.</li>
+    </ul>
+      <h2>Java Implementation</h2> 
+  
+  ```java
+  public class BoyerMooreVoting {
+    public static int findMajorityElement(int[] nums) {
+        // Counting Phase
+        int candidate = 0;
+        int count = 0;
+        
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+        
+        // Verification Phase
+        count = 0;
+        for (int num : nums) {
+            if (num == candidate) {
+                count++;
+            }
+        }
+        
+        return count > nums.length / 2 ? candidate : -1;
+    }
+    
+    public static void main(String[] args) {
+        int[] nums = {2, 2, 1, 1, 1, 2, 2};
+        int majorityElement = findMajorityElement(nums);
+        System.out.println(majorityElement);  // Output: 2
+    }
+  ```
+<h2>Complexity Analysis</h2>
+    <ul>
+        <li><strong>Time Complexity:</strong> <code>O(n)</code> — Each phase traverses the array once.</li>
+        <li><strong>Space Complexity:</strong> <code>O(1)</code> — The algorithm uses only a few additional variables regardless of the array size.</li>
+    </ul>
+
+</details>
